@@ -34,9 +34,14 @@ import mstr  # noqa: E402
 
 # Sigma-analog lookup, mirroring the converter (flagged-table fallback).
 # Keep in sync with refs/viz-type-mapping.md in the converter skill.
+# Types with a real Sigma mapping (see ../microstrategy-to-sigma/refs/
+# viz-type-mapping.md, demo-sweep-validated). Others = flagged-table fallback;
+# custom/marketplace vizzes (HC*/D3*/Vitara*/EChart*/Arria*…) are never mapped.
 VIZ_MAPPED = {
-    'grid', 'kpi', 'multi_metric_kpi', 'microcharts',
-    'bar_chart', 'line_chart', 'combo_chart', 'heat_map',
+    'grid', 'compound_grid', 'kpi', 'multi_metric_kpi', 'comparison_kpi',
+    'bar_chart', 'line_chart', 'combo_chart', 'area_chart',
+    'pie_chart', 'ring_chart', 'bubble_chart',
+    'geospatial_service', 'google_map', 'esri_map',
 }
 # MicroStrategy object types (quick-search `type` param)
 TYPE_REPORT = 3
