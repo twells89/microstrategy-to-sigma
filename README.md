@@ -20,10 +20,15 @@ Analytical-Engine row-collapse quirk is reproduced deterministically
 **Roadmap** (deliberately not in the validated path — see
 `skills/microstrategy-to-sigma/refs/design-notes.md`):
 chart-visualization emission (the dossier viz-type lookup is
-extraction-validated; only `grid` builds are parity-proven), filters /
-selectors / page-by / prompts, and the newer fully-REST-authorable
-**"Data Model" object** (`/api/model/dataModels`, incl. `securityFilters` —
-the future RLS port surface).
+extraction-validated; only `grid` builds are parity-proven) and filters /
+selectors / page-by / prompts.
+
+Strategy One's newer **"Data Model" object** (Mosaic, `/api/model/dataModels`)
+IS covered: extraction + authoring + parity-validated live querying
+(`connect_live`, exact 19/19 vs the classic fixture) — see
+`skills/microstrategy-to-sigma/refs/datamodels.md` and
+`scripts/{build,extract}_datamodel.py`. Its `securityFilters` (RLS) remain
+the future RLS-port surface.
 
 ## What's in the box
 
